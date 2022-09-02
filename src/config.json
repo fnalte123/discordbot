@@ -1,0 +1,18 @@
+{
+
+	"guildid": "944612117795979315",
+    "clientid": "1008717639142613024",
+    "welcomechannel": "1011294190166081588",
+    "verifyrolle": "1011381945386676255",
+    "verifychannel": "1011764042047688815",
+    "verifymessage": "Velkommen til fnalte's private server! For at sikre mig at du ikke er en der ikke burde være her, skal du lige verificere dig selv ved at trykke herunder!",
+
+    "Ticketchannel": "1014533727872880650",
+    "TicketMessage": "Opret en ticket her for at komme i kontakt med staff teamet.",
+
+    "host": "127.0.0.1",
+    "user": "root",
+    "pass": "",
+    "db": "fnalte"
+}
+
