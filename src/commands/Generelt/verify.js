@@ -14,17 +14,8 @@ module.exports = {
                 content: "Du satte verify kanalen!",
                 ephemeral: true,
             })
-            .then(() => {
-                client.pool.getConnection(async (err, connection) => {
-                    if (err) throw err; // not connected!
-                    connection.query("UPDATE verify SET verifychannel = ?", [interaction.channel.id], (err, data) => {
-                        if (err) {
-                            console.error(err);
-                        }
-                    });
-                    connection.release();
-                    if (err) throw err;
-                });
+            .then(async () => {
+                await client.pool.query("UPDATE verify SET verifychannel = ?", [interaction.channel.id]);
             });
     },
 };

@@ -14,17 +14,8 @@ module.exports = {
                 content: "Du satte ticket kanalen!",
                 ephemeral: true,
             })
-            .then(() => {
-                client.pool.getConnection(async (err, connection) => {
-                    if (err) throw err; // not connected!
-                    connection.query("UPDATE ticketsystem SET ticketkanal = ?", [interaction.channel.id], (err, data) => {
-                        if (err) {
-                            console.error(err);
-                        }
-                    });
-                    connection.release();
-                    if (err) throw err;
-                });
+            .then(async () => {
+                await client.pool.query("UPDATE ticketsystem SET ticketkanal = ?", [interaction.channel.id]);
             });
     },
 };
